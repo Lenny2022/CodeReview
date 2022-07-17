@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Req_Resp:war">
+    <output-path>$PROJECT_DIR$/JavaWeb/Req_Resp/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Req_Resp</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Req_Resp-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Req_Resp:war exploded" />
+    </root>
+  </artifact>
+</component>

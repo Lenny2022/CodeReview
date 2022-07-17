@@ -1,0 +1,60 @@
+package Set.mySet.treeSet;
+
+import java.util.Objects;
+
+/**
+ * @author: lenny
+ * @Date: 2022/6/20 18:48
+ * @Description:
+ */
+public class Teacher {
+    private String name;
+
+    private Integer age;
+
+    public Teacher(String name, Integer age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public Teacher() {
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Teacher teacher = (Teacher) o;
+        return Objects.equals(name, teacher.name) && Objects.equals(age, teacher.age);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age);
+    }
+
+}

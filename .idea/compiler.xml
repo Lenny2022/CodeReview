@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="JavaSE" />
+        <module name="tomcat" />
+        <module name="MyBatis2" />
+        <module name="JDBC" />
+        <module name="MyBatis" />
+        <module name="Req_Resp" />
+        <module name="Servlet01" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="JavaSE" target="17" />
+      <module name="JavaWeb" target="17" />
+      <module name="JDBC" target="17" />
+      <module name="MyBatis" target="17" />
+      <module name="MyBatis2" target="17" />
+      <module name="Req_Resp" target="1.8" />
+      <module name="Servlet01" target="1.8" />
+      <module name="ServletDemo01" target="1.8" />
+      <module name="tomcat" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

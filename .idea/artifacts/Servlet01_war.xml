@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Servlet01:war">
+    <output-path>$PROJECT_DIR$/JavaWeb/Servlet01/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Servlet01</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Servlet01-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Servlet01:war exploded" />
+    </root>
+  </artifact>
+</component>

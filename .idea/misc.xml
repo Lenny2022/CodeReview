@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/JavaWeb/Req_Resp" />
+    <file type="web" url="file://$PROJECT_DIR$/JavaWeb/Servlet01" />
+    <file type="web" url="file://$PROJECT_DIR$/JavaWeb/ServletDemo01" />
+    <file type="web" url="file://$PROJECT_DIR$/JavaWeb/tomcat" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/JavaSE/pom.xml" />
+        <option value="$PROJECT_DIR$/JavaWeb/tomcat/pom.xml" />
+        <option value="$PROJECT_DIR$/JavaWeb/pom.xml" />
+        <option value="$PROJECT_DIR$/JavaWeb/Servlet01/pom.xml" />
+        <option value="$PROJECT_DIR$/JavaWeb/Req_Resp/pom.xml" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>注册</title>
+
+    <link rel="stylesheet" href="./注册_files/register.css">
+
+</head>
+<body>
+<iframe name="toppage" width="100%" height="300" marginwidth="0" marginheight="0" frameborder="no" border="0"  =""
+        src="注册_files/head.html"></iframe>
+<!-- 头部 end -->
+<div class="rg_layout">
+    <div class="rg_form clearfix">
+
+        <div class="rg_form_left">
+            <p>新用户注册</p>
+            <p>USER REGISTER</p>
+        </div>
+
+        <div class="rg_form_center">
+
+                <!--表单-->
+                <form action="/lenny/ServletDemo01" method="post" autocomplete="off">
+                    <!--表格-->
+                    <table >
+                    <!--第一行-->
+                    <tr>
+                        <td width="20%">
+                            <label for="username">姓名</label>
+                        </td>
+                        <td>
+                            <input type="text" id="username" name="username" value="" placeholder="在此输入姓名" required>
+                        </td>
+                    </tr>
+
+                    <!--第二行-->
+                    <tr>
+                        <td>
+                            <label for="password">密码</label>
+                        </td>
+                        <td>
+                            <input type="password" id="password" name="password" value="" placeholder="在此输入密码" required>
+                        </td>
+                    </tr>
+
+
+                    <!--第三行-->
+                    <tr>
+                        <td>
+                            <label for="email">邮箱</label>
+                        </td>
+                        <td>
+                            <input type="email" id="email" name="email" value="" placeholder="在此输入邮箱" required>
+                        </td>
+                    </tr>
+
+                    <!--第四行-->
+                    <tr>
+                        <td>
+                            <label for="tel">电话</label>
+                        </td>
+                        <td>
+                            <input type="tel" id="tel" name="tel" value="" placeholder="在此输入手机号" required>
+                        </td>
+                    </tr>
+
+                    <!--第五行-->
+                    <tr>
+                        <td>
+                            <label for="gender">性别</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="gender" name="gender" value="men">男
+                            <input type="radio" name="gender" value="women">女
+                        </td>
+                    </tr>
+
+                    <!--第六行-->
+                    <tr>
+                        <td>
+                            <label for="hobby">爱好</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="hobby" name="hobby" value="抽烟">抽烟
+                            <input type="checkbox" name="hobby" value="喝酒">喝酒
+                            <input type="checkbox" name="hobby" value="烫头">烫头
+                        </td>
+                    </tr>
+
+                    <!--第七行-->
+                    <tr>
+                        <td>
+                            头像
+                        </td>
+                        <td>
+                            <input type="file" name="upphoto"><br/>
+                        </td>
+                    </tr>
+
+                    <!--第八行-->
+                    <tr>
+                        <td>
+                            出生日期
+                        </td>
+                        <td>
+                            <input type="date" name="日期" value="日期"><br>
+                        </td>
+                    </tr>
+
+
+                    <!--第九行-->
+                    <tr>
+                        <td>
+                            所在城市
+                        </td>
+                        <td>
+                            <select name="city">
+                                <option>---所在省会---</option>
+                                <option>江苏省</option>
+                                <option>安徽省</option>
+                                <option>日本省</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!--第十行-->
+                    <tr>
+                        <td>
+                            建议
+                        </td>
+                        <td>
+                            <textarea name="qm" cols="30" rows="4"></textarea>
+                        </td>
+                    </tr>
+
+
+                    <!--第十一行-->
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>
+                            <button type="submit">注册</button>
+                        </td>
+                    </tr>
+
+
+
+
+
+                <!--注册表单结束-->
+                    </table>
+            </form>
+
+        </div>
+
+
+
+        <div class="rg_form_right">
+            <p>
+                已有账号？
+                <a href="javascript:$('#loginBtn').click()">立即登录</a>
+            </p>
+        </div>
+
+    </div>
+</div>
+    <iframe name="toppage" width="100%" marginwidth="0" marginheight="0" frameborder="no" border="0"  =""
+            src="注册_files/footer.html"></iframe>
+
+
+</body>
+</html>

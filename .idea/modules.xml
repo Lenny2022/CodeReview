@@ -3,6 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/CodeReview.iml" filepath="$PROJECT_DIR$/.idea/CodeReview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaWeb/JDBC/JDBC.iml" filepath="$PROJECT_DIR$/JavaWeb/JDBC/JDBC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaSE/JavaSE.iml" filepath="$PROJECT_DIR$/JavaSE/JavaSE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaWeb/JavaWeb.iml" filepath="$PROJECT_DIR$/JavaWeb/JavaWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaWeb/MyBatis/MyBatis.iml" filepath="$PROJECT_DIR$/JavaWeb/MyBatis/MyBatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaWeb/MyBatis2/MyBatis2.iml" filepath="$PROJECT_DIR$/JavaWeb/MyBatis2/MyBatis2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaWeb/Req_Resp/Req_Resp.iml" filepath="$PROJECT_DIR$/JavaWeb/Req_Resp/Req_Resp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaWeb/Servlet01/Servlet01.iml" filepath="$PROJECT_DIR$/JavaWeb/Servlet01/Servlet01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaWeb/tomcat/tomcat.iml" filepath="$PROJECT_DIR$/JavaWeb/tomcat/tomcat.iml" />
     </modules>
   </component>
 </project>
