@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--在mybatis中，映射文件中的namespace是用于绑定Dao接口的，即面向接口编程。
+当你的namespace绑定接口后，你可以不用写接口实现类，
+mybatis会通过该绑定自动帮你找到对应要执行的SQL语句-->
+<mapper namespace="com.lenny.table02.OneToManyMapper">
+
+    <!--一对多模型：班级和学生，一个班级可以有多个学生-->
+
+    <!--2.写resultMap标签
+        配置字段和实体对象属性的映射关系
+        id 是resultMap标签的唯一标识，必须唯一,放到select标签中的id属性值与resultMap标签的id属性值一致。
+    -->
+    <resultMap id="OneToMany" type="classes">
+        <!--配置字段和实体对象属性的映射关系,两个核心属性,id,property
+        column: 主键在数据库中的列名
+        property: 实体类中的属性名
+        -->
+        <id column="cid" property="id"/>
+        <result column="cname" property="name"/>
+
+        <!--
+            collection: 配置一对多的关系
+            property: 被包含对象的变量名
+            ofType: 被包含对象的类型
+        -->
+        <collection property="students" ofType="student">
+            <id column="sid" property="id"/>
+            <result column="sname" property="name"/>
+            <result column="sage" property="age"/>
+        </collection>
+
+    </resultMap>
+
+    <!--3.
+        mappers引入映射配置文件:
+        在MyBatisConfig.xml中引入OneToOneMapper.xml-->
+
+
+    <!--1.先写sql语句
+        之前会使用resultType来进行属性的封装,但是其是针对单表的,
+        这里涉及到多表的查询,所以需要使用resultMap来进行属性的封装-->
+    <select id="selectAll" resultMap="OneToMany">
+        SELECT c.id cid, c.name cname, s.id sid, s.name sname, s.age sage
+        FROM classes c,
+             student s
+        WHERE c.id = s.cid
+    </select>
+</mapper>

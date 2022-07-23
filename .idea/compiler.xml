@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="JavaSE" />
+        <module name="Spring_01_Demo" />
         <module name="tomcat" />
         <module name="MyBatis2" />
         <module name="JDBC" />
@@ -24,6 +25,8 @@
       <module name="Req_Resp" target="1.8" />
       <module name="Servlet01" target="1.8" />
       <module name="ServletDemo01" target="1.8" />
+      <module name="Spring" target="17" />
+      <module name="Spring_01_Demo" target="17" />
       <module name="tomcat" target="1.8" />
     </bytecodeTargetLevel>
   </component>

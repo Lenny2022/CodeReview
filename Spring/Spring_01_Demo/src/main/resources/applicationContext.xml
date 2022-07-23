@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--1.导入spring的坐标spring-context，对应版本是5.2.10.RELEASE-->
+
+
+    <!--2.配置bean-->
+    <!--bean标签标示配置bean
+    id属性标示给bean起名字
+    class属性表示给bean定义类型-->
+    <bean id = "bookDao" class="com.google.dao.Impl.BookDaoImpl" scope="prototype"/>
+    <!--name起别名, 可以多个, ","隔开 -->
+    <bean id = "bookService" name="lenny" class="com.google.service.Impl.BookServiceImpl" >
+        <!--bookDao在bookService内, 配置关系-->
+        <!--property表示配置当前bean的属性,
+            name: 配置那一个具体的属性
+            ref: 参照哪一个bean
+        -->
+        <property name="bookDao" ref="bookDao" />
+
+    </bean>
+
+    <!--3. 初始化IoC容器（Spring核心容器/Spring容器），通过容器获取bean 见Application2-->
+
+</beans>

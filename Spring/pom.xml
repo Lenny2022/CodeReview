@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--groupId：定义当前资源隶属组织名称（通常是域名反写，-->
+    <groupId>com.google</groupId>
+    <!--artifactId：定义当前资源的名称（通常是项目或模块名称-->
+    <artifactId>Spring</artifactId>
+    <!--> packaging：定义资源的打包方式，取值一般有如下三种
+        （1）jar：该资源打成jar包，默认是jar
+        （2）war：该资源打成war包
+        （3）pom：该资源是一个父资源（表明使用maven分模块管理），打包时只生成一个pom.xml不生成jar或其他包结构
+     -->
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>Spring_01_Demo</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>5.1.2.RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.13.2</version>
+                <!--scope: 依赖范围
+                    这里的范围主要是指以下三种范围
+                    （1）主程序范围有效（src/main目录范围内）
+                    （2）测试程序范围内有效（src/test目录范围内）
+                    （3）是否参与打包（package指令范围内）
+                    scope`标签的取值有四种：`compile,test,provided,runtime`
+                -->
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+</project>

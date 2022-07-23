@@ -10,6 +10,8 @@
       <module fileurl="file://$PROJECT_DIR$/JavaWeb/MyBatis2/MyBatis2.iml" filepath="$PROJECT_DIR$/JavaWeb/MyBatis2/MyBatis2.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaWeb/Req_Resp/Req_Resp.iml" filepath="$PROJECT_DIR$/JavaWeb/Req_Resp/Req_Resp.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaWeb/Servlet01/Servlet01.iml" filepath="$PROJECT_DIR$/JavaWeb/Servlet01/Servlet01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring/Spring.iml" filepath="$PROJECT_DIR$/Spring/Spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring/Spring_01_Demo/Spring_01_Demo.iml" filepath="$PROJECT_DIR$/Spring/Spring_01_Demo/Spring_01_Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaWeb/tomcat/tomcat.iml" filepath="$PROJECT_DIR$/JavaWeb/tomcat/tomcat.iml" />
     </modules>
   </component>

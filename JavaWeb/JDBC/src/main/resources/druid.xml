@@ -1,0 +1,32 @@
+<!--
+1. 通用配置 (官方建议使用) https://github.com/alibaba/druid/
+DruidDataSource大部分属性都是参考DBCP的，如果你原来就是使用DBCP，迁移是十分方便的。
+
+在上面的配置中，通常你需要配置url、username、password，maxActive这三项。
+Druid会自动跟url识别驱动类名，如果连接的数据库非常见数据库，配置属性driverClassName
+asyncInit是1.1.4中新增加的配置，如果有initialSize数量较多时，打开会加快应用启动时间
+-->
+<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+    <property name="url" value="${jdbc_url}" />
+    <property name="username" value="${jdbc_user}" />
+    <property name="password" value="${jdbc_password}" />
+
+    <property name="filters" value="stat" />
+
+    <property name="maxActive" value="20" />
+    <property name="initialSize" value="1" />
+    <property name="maxWait" value="6000" />
+    <property name="minIdle" value="1" />
+
+    <property name="timeBetweenEvictionRunsMillis" value="60000" />
+    <property name="minEvictableIdleTimeMillis" value="300000" />
+
+    <property name="testWhileIdle" value="true" />
+    <property name="testOnBorrow" value="false" />
+    <property name="testOnReturn" value="false" />
+
+    <property name="poolPreparedStatements" value="true" />
+    <property name="maxOpenPreparedStatements" value="20" />
+
+    <property name="asyncInit" value="true" />
+</bean>

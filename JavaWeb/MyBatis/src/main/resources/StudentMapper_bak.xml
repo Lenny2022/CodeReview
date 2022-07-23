@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="StudentMapper">
+    <select id="selectAll" resultType="com.google.bean.Student" >
+        SELECT * FROM student
+    </select>
+
+    <select id="selectByName" resultType="com.google.bean.Student" parameterType="java.lang.String">
+        SELECT * FROM student WHERE NAME = #{name}
+    </select>
+
+    <select id="insertStu" resultType="com.google.bean.Student" parameterType="student">
+        INSERT INTO student(id, NAME ,age) VALUES (#{id}, #{name}, #{age})
+    </select>
+
+    <select id="deleteById" resultType="com.google.bean.Student" parameterType="java.lang.Integer">
+        DELETE FROM student WHERE id = #{id}
+    </select>
+</mapper>
+
+<!--
+映射配置文件xml
+dtd约束
+select id 标识
+parameterType 指定参数类型
+
+-->

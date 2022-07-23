@@ -1,0 +1,318 @@
+package com.google.MyDataSourceReturn;
+
+
+import java.sql.*;
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.concurrent.Executor;
+
+/**
+ * "装饰器设计模式" 归还数据库连接的方法
+ *
+ * @author: lenny
+ * @Date: 2022/7/2 10:30
+ * @Description: 数据库连接的归还的4种方式
+ * <p>
+ * 第一种: 继承方式
+ * 第2种: 装饰器设计模式 **核心思想:在不改变原有对象的情况下,动态给该对象增加(增强)一个功能**
+ * 第3种: 适配器设计模式
+ * 第4种: 动态代理设计模式
+ */
+public class Demo2 implements Connection {
+
+    /*
+    1.定义一个类,去继承 Connection类
+    2.定义Connection连接对象和连接池对象的成员变量
+    3.通过有参构造方法完成对成员变量的赋值
+    4.重写close()方法,完成连接对象的归还
+    5.剩余的方法,只需要调用mysql驱动包的连接对象完成即可
+    6.在自定义连接池中，将获取的连接对象通过自定义连接对象进行包装
+
+
+    不足: 太多的代码,没有进行封装,没有进行细化
+     */
+
+    private final Connection connection;
+    private final List<Connection> poll;
+
+    public Demo2(Connection connection, List<Connection> poll) {
+        this.connection = connection;
+        this.poll = poll;
+    }
+
+    @Override
+    public void close() throws SQLException {
+        poll.add(connection);
+    }
+
+
+    @Override
+    public Statement createStatement() throws SQLException {
+        return connection.createStatement();
+    }
+
+    @Override
+    public PreparedStatement prepareStatement(String sql) throws SQLException {
+        return connection.prepareStatement(sql);
+    }
+
+    @Override
+    public CallableStatement prepareCall(String sql) throws SQLException {
+        return connection.prepareCall(sql);
+    }
+
+    @Override
+    public String nativeSQL(String sql) throws SQLException {
+        return  connection.nativeSQL(sql);
+    }
+
+    @Override
+    public void setAutoCommit(boolean autoCommit) throws SQLException {
+        connection.setAutoCommit(autoCommit);
+    }
+
+    @Override
+    public boolean getAutoCommit() throws SQLException {
+        return  connection.getAutoCommit();
+    }
+
+    @Override
+    public void commit() throws SQLException {
+        connection.commit();
+    }
+
+    @Override
+    public void rollback() throws SQLException {
+        connection.rollback();
+    }
+
+
+
+    @Override
+    public boolean isClosed() throws SQLException {
+
+        return connection.isClosed();
+    }
+
+    // ..........   下面的较多,就不再赘述了.  都是调用connection原有的功能即可........
+    @Override
+    public DatabaseMetaData getMetaData() throws SQLException {
+        return null;
+    }
+
+    @Override
+    public void setReadOnly(boolean readOnly) throws SQLException {
+
+    }
+
+    @Override
+    public boolean isReadOnly() throws SQLException {
+        return false;
+    }
+
+    @Override
+    public void setCatalog(String catalog) throws SQLException {
+
+    }
+
+    @Override
+    public String getCatalog() throws SQLException {
+        return null;
+    }
+
+    @Override
+    public void setTransactionIsolation(int level) throws SQLException {
+
+    }
+
+    @Override
+    public int getTransactionIsolation() throws SQLException {
+        return 0;
+    }
+
+    @Override
+    public SQLWarning getWarnings() throws SQLException {
+        return null;
+    }
+
+    @Override
+    public void clearWarnings() throws SQLException {
+
+    }
+
+    @Override
+    public Statement createStatement(int resultSetType, int resultSetConcurrency) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public PreparedStatement prepareStatement(String sql, int resultSetType, int resultSetConcurrency) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public CallableStatement prepareCall(String sql, int resultSetType, int resultSetConcurrency) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public Map<String, Class<?>> getTypeMap() throws SQLException {
+        return null;
+    }
+
+    @Override
+    public void setTypeMap(Map<String, Class<?>> map) throws SQLException {
+
+    }
+
+    @Override
+    public void setHoldability(int holdability) throws SQLException {
+
+    }
+
+    @Override
+    public int getHoldability() throws SQLException {
+        return 0;
+    }
+
+    @Override
+    public Savepoint setSavepoint() throws SQLException {
+        return null;
+    }
+
+    @Override
+    public Savepoint setSavepoint(String name) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public void rollback(Savepoint savepoint) throws SQLException {
+
+    }
+
+    @Override
+    public void releaseSavepoint(Savepoint savepoint) throws SQLException {
+
+    }
+
+    @Override
+    public Statement createStatement(int resultSetType, int resultSetConcurrency, int resultSetHoldability) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public PreparedStatement prepareStatement(String sql, int resultSetType, int resultSetConcurrency, int resultSetHoldability) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public CallableStatement prepareCall(String sql, int resultSetType, int resultSetConcurrency, int resultSetHoldability) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public PreparedStatement prepareStatement(String sql, int autoGeneratedKeys) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public PreparedStatement prepareStatement(String sql, int[] columnIndexes) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public PreparedStatement prepareStatement(String sql, String[] columnNames) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public Clob createClob() throws SQLException {
+        return null;
+    }
+
+    @Override
+    public Blob createBlob() throws SQLException {
+        return null;
+    }
+
+    @Override
+    public NClob createNClob() throws SQLException {
+        return null;
+    }
+
+    @Override
+    public SQLXML createSQLXML() throws SQLException {
+        return null;
+    }
+
+    @Override
+    public boolean isValid(int timeout) throws SQLException {
+        return false;
+    }
+
+    @Override
+    public void setClientInfo(String name, String value) throws SQLClientInfoException {
+
+    }
+
+    @Override
+    public void setClientInfo(Properties properties) throws SQLClientInfoException {
+
+    }
+
+    @Override
+    public String getClientInfo(String name) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public Properties getClientInfo() throws SQLException {
+        return null;
+    }
+
+    @Override
+    public Array createArrayOf(String typeName, Object[] elements) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public Struct createStruct(String typeName, Object[] attributes) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public void setSchema(String schema) throws SQLException {
+
+    }
+
+    @Override
+    public String getSchema() throws SQLException {
+        return null;
+    }
+
+    @Override
+    public void abort(Executor executor) throws SQLException {
+
+    }
+
+    @Override
+    public void setNetworkTimeout(Executor executor, int milliseconds) throws SQLException {
+
+    }
+
+    @Override
+    public int getNetworkTimeout() throws SQLException {
+        return 0;
+    }
+
+    @Override
+    public <T> T unwrap(Class<T> iface) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public boolean isWrapperFor(Class<?> iface) throws SQLException {
+        return false;
+    }
+}
