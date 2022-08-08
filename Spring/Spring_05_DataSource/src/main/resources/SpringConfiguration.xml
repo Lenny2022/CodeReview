@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+
+">
+
+    <!--开启新的"命名空间" context  copy,将beans改成context 即可
+               xmlns:context="http://www.springframework.org/schema/context"
+
+               http://www.springframework.org/schema/context
+               http://www.springframework.org/schema/context/spring-context.xsd
+    -->
+
+
+    <!-- 1.Spring管理第三方资源: Druid数据库连接池-->
+    <!--写入配置文件: jdbc.properties-->
+    <!--<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/db1"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+    </bean>-->
+
+    <!--2.通过properties配置文件读取-->
+    <!--2.1开启context命名空间,加载指定的properties配置文件-->
+    <!--    <context:property-placeholder location="jdbc.properties"/>-->
+
+    <!-- 类路径下,所有的properties文件;  properties间也可按","隔开-->
+    <!--3. 使用属性占位符 读取-->
+    <context:property-placeholder location="classpath*:*.properties"/>
+
+    <!--3. 使用${}读取加载的属性值-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+</beans>

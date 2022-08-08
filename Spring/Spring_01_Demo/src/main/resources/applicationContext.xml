@@ -9,9 +9,9 @@
     <!--bean标签标示配置bean
     id属性标示给bean起名字
     class属性表示给bean定义类型-->
-    <bean id = "bookDao" class="com.google.dao.Impl.BookDaoImpl" scope="prototype"/>
+    <bean id = "bookDao" class="com.BookDaoImpl" scope="prototype"/>
     <!--name起别名, 可以多个, ","隔开 -->
-    <bean id = "bookService" name="lenny" class="com.google.service.Impl.BookServiceImpl" >
+    <bean id = "bookService" name="lenny" class="com.BookServiceImpl" >
         <!--bookDao在bookService内, 配置关系-->
         <!--property表示配置当前bean的属性,
             name: 配置那一个具体的属性

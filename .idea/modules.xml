@@ -11,7 +11,19 @@
       <module fileurl="file://$PROJECT_DIR$/JavaWeb/Req_Resp/Req_Resp.iml" filepath="$PROJECT_DIR$/JavaWeb/Req_Resp/Req_Resp.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaWeb/Servlet01/Servlet01.iml" filepath="$PROJECT_DIR$/JavaWeb/Servlet01/Servlet01.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring/Spring.iml" filepath="$PROJECT_DIR$/Spring/Spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVC/SpringMVC.iml" filepath="$PROJECT_DIR$/SpringMVC/SpringMVC.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring/Spring_01_Demo/Spring_01_Demo.iml" filepath="$PROJECT_DIR$/Spring/Spring_01_Demo/Spring_01_Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring/Spring_02_bean_instance/Spring_02_bean_instance.iml" filepath="$PROJECT_DIR$/Spring/Spring_02_bean_instance/Spring_02_bean_instance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring/Spring_03_BeanLifeCycle/Spring_03_BeanLifeCycle.iml" filepath="$PROJECT_DIR$/Spring/Spring_03_BeanLifeCycle/Spring_03_BeanLifeCycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring/Spring_04_Autowrite/Spring_04_Autowrite.iml" filepath="$PROJECT_DIR$/Spring/Spring_04_Autowrite/Spring_04_Autowrite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring/Spring_05_DataSource/Spring_05_DataSource.iml" filepath="$PROJECT_DIR$/Spring/Spring_05_DataSource/Spring_05_DataSource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring/Spring_06_Annotation/Spring_06_Annotation.iml" filepath="$PROJECT_DIR$/Spring/Spring_06_Annotation/Spring_06_Annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring/Spring_07_MyBatis/Spring_07_MyBatis.iml" filepath="$PROJECT_DIR$/Spring/Spring_07_MyBatis/Spring_07_MyBatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring/Spring_08_AOP_/Spring_08_AOP.iml" filepath="$PROJECT_DIR$/Spring/Spring_08_AOP_/Spring_08_AOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring/Spring_08_aop/Spring_08_aop.iml" filepath="$PROJECT_DIR$/Spring/Spring_08_aop/Spring_08_aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring/Spring_09_AOP_InterfaceSpeedTest/Spring_09_AOP_InterfaceSpeedTest.iml" filepath="$PROJECT_DIR$/Spring/Spring_09_AOP_InterfaceSpeedTest/Spring_09_AOP_InterfaceSpeedTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring/Spring_10_Netdisk_PSW_Check/Spring_10_Netdisk_PSW_Check.iml" filepath="$PROJECT_DIR$/Spring/Spring_10_Netdisk_PSW_Check/Spring_10_Netdisk_PSW_Check.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring/Spring_11_Transactiona/Spring_11_Transactiona.iml" filepath="$PROJECT_DIR$/Spring/Spring_11_Transactiona/Spring_11_Transactiona.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaWeb/tomcat/tomcat.iml" filepath="$PROJECT_DIR$/JavaWeb/tomcat/tomcat.iml" />
     </modules>
   </component>
