@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/JavaWeb/Servlet01/Servlet01.iml" filepath="$PROJECT_DIR$/JavaWeb/Servlet01/Servlet01.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring/Spring.iml" filepath="$PROJECT_DIR$/Spring/Spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringMVC/SpringMVC.iml" filepath="$PROJECT_DIR$/SpringMVC/SpringMVC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVC/SpringMVC_01_Demo/SpringMVC_01_Demo.iml" filepath="$PROJECT_DIR$/SpringMVC/SpringMVC_01_Demo/SpringMVC_01_Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring/Spring_01_Demo/Spring_01_Demo.iml" filepath="$PROJECT_DIR$/Spring/Spring_01_Demo/Spring_01_Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring/Spring_02_bean_instance/Spring_02_bean_instance.iml" filepath="$PROJECT_DIR$/Spring/Spring_02_bean_instance/Spring_02_bean_instance.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring/Spring_03_BeanLifeCycle/Spring_03_BeanLifeCycle.iml" filepath="$PROJECT_DIR$/Spring/Spring_03_BeanLifeCycle/Spring_03_BeanLifeCycle.iml" />

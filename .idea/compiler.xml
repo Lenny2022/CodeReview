@@ -15,7 +15,7 @@
         <module name="Spring_06_Annotation" />
         <module name="Spring_07_MyBatis" />
         <module name="MyBatis2" />
-        <module name="SpringMVC" />
+        <module name="SpringMVC_01_Demo" />
         <module name="Spring_11_Transactiona" />
         <module name="Servlet01" />
         <module name="Spring_03_BeanLifeCycle" />
@@ -30,29 +30,28 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="JavaSE" target="17" />
-      <module name="JavaWeb" target="17" />
-      <module name="JDBC" target="17" />
-      <module name="MyBatis" target="17" />
-      <module name="MyBatis2" target="17" />
+      <module name="JavaSE" target="1.8" />
+      <module name="JavaWeb" target="1.8" />
+      <module name="JDBC" target="1.8" />
+      <module name="MyBatis" target="1.8" />
+      <module name="MyBatis2" target="1.8" />
       <module name="Req_Resp" target="1.8" />
       <module name="Servlet01" target="1.8" />
-      <module name="ServletDemo01" target="1.8" />
-      <module name="Spring" target="17" />
-      <module name="Spring_01_Demo" target="17" />
-      <module name="Spring_02_bean_instance" target="17" />
-      <module name="Spring_03_BeanLifeCycle" target="17" />
-      <module name="Spring_04_Autowrite" target="17" />
-      <module name="Spring_05_DataSource" target="17" />
-      <module name="Spring_06_Annotation" target="17" />
-      <module name="Spring_06_Container" target="17" />
-      <module name="Spring_07_MyBatis" target="17" />
+      <module name="Spring" target="1.8" />
+      <module name="Spring_01_Demo" target="1.8" />
+      <module name="Spring_02_bean_instance" target="1.8" />
+      <module name="Spring_03_BeanLifeCycle" target="1.8" />
+      <module name="Spring_04_Autowrite" target="1.8" />
+      <module name="Spring_05_DataSource" target="1.8" />
+      <module name="Spring_06_Annotation" target="1.8" />
+      <module name="Spring_07_MyBatis" target="1.8" />
       <module name="Spring_08_AOP" target="17" />
-      <module name="Spring_08_aop" target="17" />
-      <module name="Spring_09_AOP_InterfaceSpeedTest" target="17" />
-      <module name="Spring_10_Netdisk_PSW_Check" target="17" />
-      <module name="Spring_11_Transactiona" target="17" />
-      <module name="SpringMVC" target="17" />
+      <module name="Spring_08_aop" target="1.8" />
+      <module name="Spring_09_AOP_InterfaceSpeedTest" target="1.8" />
+      <module name="Spring_10_Netdisk_PSW_Check" target="1.8" />
+      <module name="Spring_11_Transactiona" target="1.8" />
+      <module name="SpringMVC" target="1.8" />
+      <module name="SpringMVC_01_Demo" target="1.8" />
       <module name="tomcat" target="1.8" />
     </bytecodeTargetLevel>
   </component>

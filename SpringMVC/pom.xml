@@ -6,7 +6,11 @@
 
     <groupId>com.google</groupId>
     <artifactId>SpringMVC</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>SpringMVC_01_Demo</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
