@@ -18,6 +18,7 @@
         <module name="SpringMVC_01_Demo" />
         <module name="Spring_11_Transactiona" />
         <module name="Servlet01" />
+        <module name="SpringMVC_01_loader" />
         <module name="Spring_03_BeanLifeCycle" />
         <module name="Spring_08_AOP" />
         <module name="Spring_08_aop" />
@@ -52,6 +53,7 @@
       <module name="Spring_11_Transactiona" target="1.8" />
       <module name="SpringMVC" target="1.8" />
       <module name="SpringMVC_01_Demo" target="1.8" />
+      <module name="SpringMVC_01_loader" target="1.8" />
       <module name="tomcat" target="1.8" />
     </bytecodeTargetLevel>
   </component>

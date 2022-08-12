@@ -15,11 +15,12 @@ import org.springframework.web.servlet.support.AbstractDispatcherServletInitiali
  */
 
 
+// AbstractAnnotationConfigDispatcherServletInitializer 是AbstractDispatcherServletInitializer的子类,能够简化创建web容器的步骤
 public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[0];
+        return new Class[]{SpringConfig.class};
     }
 
     @Override
@@ -32,7 +33,6 @@ public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitiali
         return new String[]{"/"};
     }
 }
-
 
 // public class WebConfig extends AbstractDispatcherServletInitializer {
 //

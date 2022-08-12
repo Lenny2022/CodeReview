@@ -10,7 +10,93 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>SpringMVC_01_Demo</module>
+        <module>SpringMVC_01_loader</module>
     </modules>
+    <dependencyManagement>
+        <dependencies>
+            <!--1. 导入springMVC和Servlet的坐标-->
+            <!--* cope是maven中jar包依赖作用范围的描述，
+                * 如果不设置默认是`compile`在在编译、运行、测试时均有效
+                * 如果运行有效的话就会和tomcat中的servlet-api包发生冲突，导致启动报错
+                * provided代表的是该包只在编译和测试的时候用，运行的时候无效直接使用tomcat中的，就避免冲突-->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>4.0.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>5.3.9</version>
+            </dependency>
+
+
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.13.2</version>
+                <!--scope: 依赖范围
+                    这里的范围主要是指以下三种范围
+                    （1）主程序范围有效（src/main目录范围内）
+                    （2）测试程序范围内有效（src/test目录范围内）
+                    （3）是否参与打包（package指令范围内）
+                    scope`标签的取值有四种：`compile,test,provided,runtime`
+                -->
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>5.1.49</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>1.2.6</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>3.5.7</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>5.3.16</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>2.0.7</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.4</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>1.7.25</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.32</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
