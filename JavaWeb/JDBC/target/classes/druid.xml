@@ -7,10 +7,9 @@ Druid会自动跟url识别驱动类名，如果连接的数据库非常见数据
 asyncInit是1.1.4中新增加的配置，如果有initialSize数量较多时，打开会加快应用启动时间
 -->
 <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
-    <!-- 基本属性 url、user、password -->
-    <property name="url" value="jdbc:mysql://localhost:3306/db1" />
-    <property name="username" value="root" />
-    <property name="password" value="root" />
+    <property name="url" value="${jdbc_url}" />
+    <property name="username" value="${jdbc_user}" />
+    <property name="password" value="${jdbc_password}" />
 
     <property name="filters" value="stat" />
 

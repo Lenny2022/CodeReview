@@ -16,6 +16,9 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class Student implements Serializable {
 
+    private static final long serialVersionUID = 89749674396L;
+
+    private Integer id;
     private String name;
     private Integer age;
 }

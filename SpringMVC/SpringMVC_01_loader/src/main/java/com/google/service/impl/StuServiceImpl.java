@@ -21,7 +21,7 @@ public class StuServiceImpl implements StuService {
     @Override
     public boolean save(String name, Integer age) {
 
-        Student stu = new Student(name, age);
+        Student stu = new Student(null,name, age);
 
         int insert = stuDao.insert(stu);
 

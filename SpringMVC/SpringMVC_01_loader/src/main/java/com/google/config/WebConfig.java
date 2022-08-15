@@ -1,9 +1,6 @@
 package com.google.config;
 
-import org.springframework.web.context.WebApplicationContext;
-import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-import org.springframework.web.servlet.support.AbstractDispatcherServletInitializer;
 
 /**
  * @author: lenny
@@ -32,6 +29,14 @@ public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitiali
     protected String[] getServletMappings() {
         return new String[]{"/"};
     }
+
+    // 中文乱码处理
+
+    
+    // @Override
+    // protected Filter[] getServletFilters() {
+    //     return new Filter[]{new CharacterEncodingFilter("UTF-8")};
+    // }
 }
 
 // public class WebConfig extends AbstractDispatcherServletInitializer {

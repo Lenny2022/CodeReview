@@ -23,16 +23,16 @@ public class StuController {
     @Autowired
     private StuService stuService;
 
-    @RequestMapping("/insert")
+    // RequestMapping : produces : 返回的数据类型,内部指定 MessageConverter 返回的数据类型
+
+    @RequestMapping(value = "/test", produces = {"application/json;charset=UTF-8"})
     @ResponseBody
-    public String insertStu() {
+    public String insertStu(String name, Integer age) {
 
+        System.out.println("name:" + name + ", age:" + age);
 
+        log.info("name:{},age:{}", name, age);
 
-        System.out.println("简单测试一下springmvc,insertStu");
-
-        // log.info("name:{},age:{}", name, age);
-        //
         // boolean result = stuService.save(name, age);
         //
         // try {
@@ -42,9 +42,11 @@ public class StuController {
         // } catch (Exception e) {
         //     log.error("插入Student表失败！", e);
         // }
-        //
+
         // return ResponseEntity.badRequest().body("fail");
-        return "{user : 'lenny'}";
+
+        return "{\"name\":\"" + name + "\",\"age\":\"" + age + "\"}";
+
     }
 }
 

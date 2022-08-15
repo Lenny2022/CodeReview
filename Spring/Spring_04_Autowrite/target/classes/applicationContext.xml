@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--自动注入-->
+    <bean id="bookDao" class="com.google.dao.Impl.BookDaoImpl"/>
+
+    <bean id="bookService" class="com.google.service.Impl.BookServiceImpl">
+        <property name="bookDao" ref="bookDao"/>
+    </bean>
+
+    <bean id="bankDao" class="com.google.dao.Impl.BankDaoImpl">
+        <property name="array">
+            <array>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </array>
+        </property>
+
+        <property name="list">
+            <list>
+                <value>1</value>
+                <value>2</value>
+                <value>你好</value>
+
+            </list>
+        </property>
+
+        <property name="set">
+            <set>
+                <value>chian</value>
+                <value>japan</value>
+                <value>American</value>
+                <value>American</value>
+            </set>
+        </property>
+
+        <property name="map">
+            <map>
+                <entry key="1" value="chian"/>
+                <entry key="2" value="japan"/>
+                <entry key="3" value="American"/>
+            </map>
+        </property>
+
+        <property name="properties">
+            <props>
+                <prop key="1">Australia</prop>
+                <prop key="2">China</prop>
+                <prop key="3">Japan</prop>
+                <prop key="4">NewLand</prop>
+            </props>
+        </property>
+    </bean>
+
+
+</beans>

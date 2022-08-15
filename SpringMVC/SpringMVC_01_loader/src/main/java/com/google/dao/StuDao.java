@@ -10,6 +10,6 @@ import org.apache.ibatis.annotations.Insert;
  */
 public interface StuDao {
 
-    @Insert("insert into stu(name,age) values(#{name},#{age})")
+    @Insert("insert into Student(id,name,age) values(#{id},#{name},#{age})")
     int insert(Student stu);
 }

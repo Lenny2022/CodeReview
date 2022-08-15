@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--1.导入spring的坐标spring-context，对应版本是5.2.10.RELEASE-->
+
+    <!--2.配置bean-->
+    <!--bean标签标示配置bean
+    id属性标示给bean起名字
+    class属性表示给bean定义类型-->
+    <!--1. 构造方法创建对象-->
+    <!--    <bean id = "bookDao"  name="lennyBook" class="com.BookDaoImpl" />-->
+    <!--name起别名, 可以多个, ","隔开 -->
+    <!--3. 初始化IoC容器（Spring核心容器/Spring容器）-->
+
+    <!--2, Spring通过静态工厂类造对象-->
+    <!--    <bean id = "stuDao"  class="com.google.factory.StuStaticFactory"  factory-method="getStuDao"/>-->
+
+
+    <!--3. 实例 工厂创建bean
+        非静态,需要两个对象
+    -->
+    <!--3.1 工厂bean对象-->
+    <!--    <bean id="userInstanceFactory" class="com.google.factory.UserInstanceFactory"/>-->
+    <!--    <bean id="userDao" factory-method="getUserDao" factory-bean="userInstanceFactory"/>-->
+
+
+    <!--4. factoryBean, 工厂bean的优化版-->
+    <bean id="userDao" class="com.google.factory.UserDaoFactoryBean"/>
+</beans>
